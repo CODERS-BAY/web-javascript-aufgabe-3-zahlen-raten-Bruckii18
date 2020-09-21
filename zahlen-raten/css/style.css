@@ -1,0 +1,32 @@
+body {
+    margin: auto;
+    background-color: rgb(199, 199, 199);
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    border: 5px solid black;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+p,
+input {
+    display: table;
+    margin: auto
+}
+
+button,
+input {
+    padding: 1rem;
+    font-family: 'Teko', sans-serif;
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
