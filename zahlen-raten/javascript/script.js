@@ -10,7 +10,7 @@ setRandomNumber();
 function setHighestNumber() {
     highestNumber = document.getElementById("highestNumber").value;
     setRandomNumber();
-    document.getElementById("highestNumberShow").innerHTML = "You chose " + highestNumber;
+    document.getElementById("highestNumberShow").innerHTML = "Number is between 1 and " + highestNumber;
 }
 
 function setMaxTries() {
@@ -24,6 +24,7 @@ function inputCheck() {
     document.getElementById("setTries").disabled = true;
     if (maxTries > tries) {
         var givenNumber = document.getElementById("inputNumber").value;
+    if (givenNumber != 0) {
         if (givenNumber == hiddenNumber) {
             winning = true;
             document.getElementById("infoText").innerHTML = "YEEY! " + givenNumber + " was correct. You won!"
@@ -38,6 +39,9 @@ function inputCheck() {
             alert("You lost! The hidden number was " + hiddenNumber + ". You can try again.")
             reset();
         }
+    } else {
+        alert("You need to put in a number!")
+    }
 
     }
 }
