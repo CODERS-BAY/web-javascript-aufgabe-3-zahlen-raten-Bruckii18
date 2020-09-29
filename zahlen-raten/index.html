@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guess the number</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Guess a number!</h1>
+    </header>
+
+    <main>
+        <article class="flex-container">
+            <section>
+                <p>Enter your max. Tries: (3 by default) </p><input type="number" name="setTries" id="setTries"
+                    onchange="setMaxTries()">
+            </section>
+
+            <section>
+                <p>Enter your highest Number: (10 by default) </p><input type="number" name="highestNumber"
+                    id="highestNumber" onchange="setHighestNumber()">
+            </section>
+        </article>
+
+        <p id="highestNumberShow"></p>
+
+        <article>
+            <p>Enter the Number you wanna guess: </p><input type="text" name="inputNumber" id="inputNumber">
+            <button type="button" onclick="inputCheck()">Take a guess!</button>
+        </article>
+
+        <article>
+            <p id="tryCounter">Remaining Tries: </p>
+            <p id="remainingTryCounter"></p>
+            <p id="infoText"></p>
+        </article>
+
+        <button type="reset" id="reset" onclick="reset()">Reset</button>
+    </main>
+</body>
+<script src="javascript/script.js"></script>
+
+</html>
