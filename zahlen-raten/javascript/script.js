@@ -8,13 +8,13 @@ setRandomNumber();
 
 
 function setHighestNumber() {
-    highestNumber = document.getElementById("highestNumber").value;
+    highestNumber = parseInt(document.getElementById("highestNumber").value);
     setRandomNumber();
     document.getElementById("highestNumberShow").innerHTML = "Number is between 1 and " + highestNumber;
 }
 
 function setMaxTries() {
-    maxTries = document.getElementById("setTries").value;
+    maxTries = parseInt(document.getElementById("setTries").value);
     tryCounter();
 }
 
@@ -23,7 +23,7 @@ function inputCheck() {
     document.getElementById("highestNumber").disabled = true;
     document.getElementById("setTries").disabled = true;
     if (maxTries > tries) {
-        var givenNumber = document.getElementById("inputNumber").value;
+        var givenNumber = parseInt(document.getElementById("inputNumber").value);
     if (givenNumber != 0) {
         if (givenNumber == hiddenNumber) {
             winning = true;
